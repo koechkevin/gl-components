@@ -15,8 +15,8 @@ export const register = async (values, dispatch, onSuccess = () => {}, onFailed 
   } catch (err) {
     onFailed(err);
     dispatch(loading(false));
-    if (err.response.status === 422) {
-      dispatch(errorsAction(err.response.data));
+    if (err.response?.status === 422) {
+      dispatch(errorsAction(err.response?.data));
     }
   }
 };
