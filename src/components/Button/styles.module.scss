@@ -1,0 +1,72 @@
+.button {
+  background-color: darkgoldenrod;
+  width: 100%;
+  border: none;
+  outline: 0;
+  height: 32px;
+  border-radius: 8px;
+  margin-top: 16px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  color: #ffffff;
+
+  &:after {
+    content: "";
+    background-color: #d6bd804d;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 50%;
+    padding-top: 240%;
+    padding-left: 240%;
+    margin-top: -120%;
+    margin-left: -120%;
+    opacity: 0;
+    transition: all 1s;
+  }
+
+  &:active:after {
+    padding-top: 0;
+    padding-left: 0;
+    margin-top: 0;
+    margin-left: 0;
+    opacity: 1;
+    transition: 0s;
+  }
+}
+
+.loader {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  border-bottom-color: transparent;
+  animation: rotate infinite 600ms linear;
+}
+
+.loaderParent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@-webkit-keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
