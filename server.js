@@ -15,12 +15,16 @@ app.post('/api/register', (req, res) => {
   //   errors.password = 'password is required'
   // }
   if (!req.body.option) {
-    errors.option = 'option is required'
+    errors.option = 'This field is required'
   }
   if (Object.keys(errors).length) {
-    return res.status(422).json(errors)
+    return setTimeout(() => {
+      return res.status(422).json(errors)
+    }, 2000)
   }
-  res.status(200).json({...req.body});
+  setTimeout(() => {
+    res.status(200).json({...req.body});
+  }, 2000)
 });
 app.use('*', (req, res) => {
   res.status(404).json ({ error: 'Not found'})
