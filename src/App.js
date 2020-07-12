@@ -35,6 +35,7 @@ function App() {
       className="App"
     >
       <form onSubmit={onSubmit} style={{ width: 400 }}>
+        <h1>Form</h1>
         <div>Select an option</div>
         <Select error={!!errors.option} help={errors.option} onChange={onChange} id="option">
           <option>First Option</option>

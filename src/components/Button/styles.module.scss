@@ -36,6 +36,11 @@
     opacity: 1;
     transition: 0s;
   }
+
+  &.disabled {
+    background-color: rgba(0,0,0,.12);
+    cursor: no-drop;
+  }
 }
 
 .loader {
